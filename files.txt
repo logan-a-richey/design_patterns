@@ -1,0 +1,31 @@
+## Creational
+factory.cpp
+abstract.cpp
+singleton.cpp
+prototype.cpp
+builder.cpp
+
+## Structural
+adapter.cpp
+bridge.cpp
+composite.cpp
+decorator.cpp
+facade.cpp
+flyweight.cpp
+proxy.cpp
+
+## Behavioral
+chain_of_responsibilty.cpp
+command.cpp
+interpreter.cpp
+mediator.cpp
+memento.cpp
+observer.cpp
+state.cpp
+strategy.cpp
+template.cpp
+visitor.cpp
+
+## ECS
+ecs_example.cpp
+
