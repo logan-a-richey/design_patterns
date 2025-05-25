@@ -23,7 +23,7 @@ private:
 public:
     NumberExpression(int number) : number(number) {}
 
-    int interpret(Context& context) override {
+    int interpret(Context& /*context*/) override {
         return number;
     }
 };
@@ -87,7 +87,7 @@ public:
     }
 
 private:
-    Expression* buildExpressionTree(const std::string& expression) {
+    Expression* buildExpressionTree(const std::string& /*expression*/) {
         // Logic to parse expression and create expression tree
         // For simplicity, hardcoding an expression tree
         return new AdditionExpression(
