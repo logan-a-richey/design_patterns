@@ -1,0 +1,143 @@
+When to use each pattern:
+
+Design Pattern Roadmap — When & Why to Use
+Creational Patterns
+
+Focus: Object creation mechanisms to increase flexibility and reuse
+
+    Factory Method
+    When: You want to defer object creation to subclasses without specifying exact classes.
+    Why: Encapsulates object creation, promotes loose coupling.
+    Example: Creating different types of farm animals via a common interface.
+
+    Abstract Factory
+    When: You need to create families of related objects without specifying their concrete classes.
+    Why: Enforces consistency among products and hides complex creation logic.
+    Example: Farm equipment factories producing matching tractors, plows, and harvesters.
+
+    Singleton
+    When: You want exactly one instance of a class with global access.
+    Why: Controls resource access or manages shared state like configuration or logging.
+    Caution: Avoid overuse — hard to test and can become a global variable.
+    Example: Logger or system clock manager.
+
+    Generic Singleton (Template-based)
+    When: You want singleton behavior for many types without rewriting code.
+    Why: Reuse singleton logic generically with templates.
+
+    Prototype
+    When: Creating new objects by cloning existing ones (especially if creation is expensive).
+    Why: Simplifies object creation, allows dynamic configuration of object types.
+    Example: Cloning animal profiles or musical instruments with preset configurations.
+
+    Builder
+    When: Construct complex objects step-by-step, separating construction from representation.
+    Why: Supports creating different representations with the same construction process.
+    Example: Building a custom musical instrument or configuring a farm animal’s habitat.
+
+Structural Patterns
+
+Focus: Composing classes or objects into larger structures
+
+    Adapter
+    When: You want incompatible interfaces to work together.
+    Why: Wraps an existing class with a new interface without modifying it.
+    Example: Using a legacy animal tracking system in a new farm management app.
+
+    Bridge
+    When: You want to decouple abstraction from implementation so both can vary independently.
+    Why: Helps avoid explosion of subclasses.
+    Example: Separating animal behavior (abstraction) from different feeding algorithms (implementation).
+
+    Composite
+    When: You want to treat individual objects and compositions uniformly.
+    Why: Simplifies client code by using recursive structures.
+    Example: Group of animals or instruments treated as one unit.
+
+    Decorator
+    When: You want to add responsibilities to objects dynamically without affecting others.
+    Why: Flexible alternative to subclassing for extending behavior.
+    Example: Adding accessories or behaviors to a musical instrument or farm animal (e.g., “with collar”).
+
+    Facade
+    When: You want to provide a simple unified interface to a complex subsystem.
+    Why: Hides complexity from the client.
+    Example: Simple interface for controlling a whole barn’s environment.
+
+    Flyweight
+    When: You want to share large numbers of fine-grained objects efficiently.
+    Why: Reduces memory footprint by sharing intrinsic (unchanging) data.
+    Example: Many identical farm animals sharing common data like species traits.
+
+    Proxy
+    When: You want to control access or add functionality (lazy loading, caching, logging) to another object.
+    Why: Adds a surrogate or placeholder to manage costly object creation or access.
+    Example: Proxy for loading detailed animal info only on demand.
+
+Behavioral Patterns
+
+Focus: Algorithms and object responsibilities
+
+    Chain of Responsibility
+    When: You want to avoid coupling sender to receiver by giving multiple objects a chance to handle a request.
+    Why: Decouples sender and receiver, allows dynamic handler assignment.
+    Example: Animal health check request passing through a chain of vet specialists.
+
+    Command
+    When: You want to encapsulate requests as objects, enabling parameterization, queuing, undo, or logging.
+    Why: Decouples sender and receiver, supports flexible command handling.
+    Example: Commands to feed animals or play instrument sequences.
+
+    Interpreter
+    When: You need to interpret sentences in a language or expression tree.
+    Why: Implements a grammar to interpret user commands or scripts.
+    Example: Parsing instrument notation or animal commands.
+
+    Mediator
+    When: You want to reduce chaotic dependencies between objects by centralizing communication.
+    Why: Simplifies object interactions and promotes loose coupling.
+    Example: Mediator coordinating interactions among farm animals and farmer.
+
+    Memento
+    When: You want to capture and restore an object's internal state without violating encapsulation.
+    Why: Supports undo or rollback operations.
+    Example: Saving an instrument’s tuning state or an animal’s health state.
+
+    Observer
+    When: You want an object to notify others automatically about state changes.
+    Why: Supports event-driven, publish-subscribe style updates.
+    Example: Weather station notifying animals of temperature changes.
+
+    State
+    When: An object’s behavior changes based on its internal state.
+    Why: Encapsulates state-specific behavior in state objects.
+    Example: Farm animal changing behavior based on mood or time of day.
+
+    Strategy
+    When: You want interchangeable algorithms or behaviors.
+    Why: Encapsulates algorithms separately from clients.
+    Example: Different feeding strategies or musical playing styles.
+
+    Template Method
+    When: You want to define skeleton of algorithm in a method, letting subclasses override parts.
+    Why: Enforces invariant steps while allowing customization.
+    Example: Animal daily routine where steps are fixed but details vary.
+
+    Visitor
+    When: You want to perform operations on objects without changing their classes, and you want to add new operations easily.
+    Why: Separates algorithm from object structure.
+    Example: Different operations on animals: health check, feeding report, or grooming.
+
+Entity-Component-System (ECS)
+
+Modern pattern mostly used in game development, separating data from behavior
+
+    Entity: Unique ID or object representing "things" in your system.
+
+    Component: Data containers with no behavior (e.g., Position, Health, Renderable).
+
+    System: Logic operating on entities with specific components.
+
+When: You want maximum flexibility, composition over inheritance, and performant data-oriented design.
+Example: Farm simulation where animals are entities, and feeding behavior, movement, and rendering are separate systems.
+
